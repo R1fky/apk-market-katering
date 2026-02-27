@@ -4,7 +4,7 @@
     <div class="container">
         <div class="d-flex justify-content-between mb-3">
             <h4>Daftar Menu</h4>
-            <a href="/merchant/menu/create" class="btn btn-primary">+ Tambah Menu</a>
+            <a href="/merchant/menus/create" class="btn btn-primary">+ Tambah Menu</a>
         </div>
 
         <div class="row">
