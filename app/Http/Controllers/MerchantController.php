@@ -12,13 +12,13 @@ class MerchantController extends Controller
     {
         $user = Auth::user();
 
-        // CEK: merchant profile sudah ada atau belum
+        // cek apakah user sudah punya merchant
+        if (!$user->merchant) {
+            return redirect('/merchant/profile'); // buat route untuk form pembuatan merchant
+        }
 
-        $menus = $user->merchant
-            ->menus()
-            ->latest()
-            ->get();
+        $menus = $user->merchant->menus()->latest()->get();
 
         return view('merchant.dashboard', compact('menus'));
-    }   
+    }
 }
