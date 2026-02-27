@@ -14,7 +14,7 @@ class MerchantController extends Controller
 
         // cek apakah user sudah punya merchant
         if (!$user->merchant) {
-            return redirect('/merchant/profile'); // buat route untuk form pembuatan merchant
+            return redirect('/merchant/profile'); 
         }
 
         $menus = $user->merchant->menus()->latest()->get();
